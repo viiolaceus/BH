@@ -17,6 +17,6 @@ plugins: [jekyll-paginate]
 paginate: 5
 paginate_path: "/blog/page:num/"
 
-url: viiolaceus.github.io
-baseurl: /BH
+url: viiolaceus.github.io/BH
+baseurl: /
 permalink: date

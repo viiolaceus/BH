@@ -1,0 +1,61 @@
+---
+layout: default
+title: Blog
+---
+<div id="top-Logo">
+			<a class="home" target="_self" href="{{base}}/">
+			<img alt="Bunnyhug Home" src="{{base}}/img/bunnyhug-logo.png" width="85" height="85" align="center"/>
+			</a>
+</div>
+<div id="splash2">
+		<div class="links">
+			{% include navigation.html %}
+		</div>
+</div>
+<!-- This loops through the paginated posts -->
+<div class="blog-list">
+<section id="b-title">
+<h3>Blog</h3></section>
+<section id="b-post">
+
+{% for post in paginator.posts %}
+	<div class="post-Feature-Container">
+	<div class="post-Feature">
+	<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+	<h4><i class="fa-regular fa-calendar"></i> {{ post.date | date_to_string }}</h4>
+	</div>
+	<div class="post-FeatureBG">
+	{%- if post.image -%}
+		<img src="{{- post.image | relative_url -}}" alt="">
+	{%- else -%}
+		<img src="../../../assets/defaultPost.png" alt="">
+	{%- endif -%}
+	</div>
+	</div>
+	<div id="post-Content">
+    {{ post.content }}
+	<!-- Share Post-->	
+		<div class="share">Share: 	
+			<a class="twitter" href="https://twitter.com/intent/tweet?url={{ post.url }}&text=" target="_blank"><i class="fab fa-twitter"></i></a>
+			<a class="bloglink" href="{{post.url}}" target="_blank"><i class="fas fa-link"></i></a>
+		</div>
+	</div>
+<hr>
+{% endfor %}
+</section>
+	
+	<div class="pagination">	
+		<!-- Pagination links -->
+			{% if paginator.previous_page %}
+				<a href="{{ paginator.previous_page_path }}"class="bloglink" alt="Previous Page"><i class="fas fa-arrow-left"></i></a>
+			{% else %}
+				<div class="unc"><i class="fas fa-arrow-left"></i></div>
+			{% endif %}
+		Page:<div class="p-button-fade">{{ paginator.page }}</div>of {{ paginator.total_pages }}
+		{% if paginator.next_page %}
+			<a href="{{ paginator.next_page_path }}" class="bloglink" alt="Next page"><i class="fas fa-arrow-right"></i></a>
+		{% else %}
+		<div class="unc"><i class="fas fa-arrow-right"></i></a></div>
+		{% endif %}
+	</div>
+</div>

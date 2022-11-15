@@ -1,0 +1,32 @@
+---
+layout: default
+# front matter tells Jekyll to process Liquid
+---
+	<div id="splash">
+		<h1>Bunnyhug</h1>
+		<div class="video-container">
+			<video class="video-js" loop muted preload="none">
+				<source src="./img/bunnyhug-splash-video.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="links">
+{% include navigation.html %}
+		</div>
+		<img alt="Bunnyhug Logo" src="./img/bunnyhug-logo.png">
+	</div>
+{% include blogpreview.html %}
+{% include team.html %}
+{% include moonglow.html %}
+{% include newsletter.html %}
+	<script type="text/javascript" src="https://vjs.zencdn.net/7.6.0/video.min.js"></script>
+	<script type="text/javascript">
+		const video = document.querySelector('video');
+		// TODO(bret): Make sure that we're not on mobile
+		window.addEventListener('load', e => {
+			// if (IS_MOBILE) return;
+			
+			video.load();
+			video.loop = true;
+			video.play();
+		});
+	</script>

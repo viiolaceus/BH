@@ -1,0 +1,49 @@
+<section id="blog-preview"><h3>Blog</h3>
+<div class="blog-roll">
+<div class="meudeus2">
+	<div class="blog-roll-two">
+			{% for post in site.posts limit: 2 %}
+			{%- if post.image -%}
+				<a href="{{ post.url }}">
+				<div class="blog-roll-text" style="background:linear-gradient(to top, rgba(24, 24, 24, 0.75) 50%, rgba(0, 0, 0, 0.1) 100%), url('{{- post.image | relative_url -}}'); background-size: cover;">
+				<div class="b1"><h2>{{ post.title }}</h2></div>
+				<div class="b2">{{ post.excerpt }}</div>
+				</div>
+				</a>
+			{%- else -%}
+			{%- assign postImage = "../../assets/defaultPost.png" -%}
+				<a href="{{ post.url }}">
+				<div class="blog-roll-text" style="background:linear-gradient(to top, rgba(24, 24, 24, 0.75) 50%, rgba(0, 0, 0, 0.1) 100%),url('{{- postImage | relative_url -}}');	background-size: cover;">
+				<div class="b1"><h2>{{ post.title }}</h2></div>
+				<div class="b2">{{ post.excerpt }}</div>
+				</div>
+				</a>
+		{%- endif -%}
+{% endfor %}
+{% for post in site.posts offset:2 limit:1 %}
+			{%- if post.image -%}
+				<a href="{{ post.url }}">
+				<div class="blog-roll-tease" style="background:linear-gradient(to top, rgba(24, 24, 24, 0.75) 50%, rgba(0, 0, 0, 0.1) 100%), linear-gradient(to left, rgba(24, 24, 24, 1) 20%, rgba(0, 0, 0, 0.0) 50%),url('{{- post.image | relative_url -}}');	background-size: cover;">
+				<div class="b3"><h2>{{ post.title }}</h2></div>
+				<div class="b3">{{ page.date | date_to_string }}</div>
+				<div class="b3">{{ post.excerpt }}</div>
+				</div>
+				</a>
+			{%- else -%}
+			{%- assign postImage = "../../assets/defaultPost.png" -%}
+				<a href="{{ post.url }}">
+				<div class="blog-roll-tease" style="background:linear-gradient(to top, rgba(24, 24, 24, 0.75) 50%, rgba(0, 0, 0, 0.1) 100%), linear-gradient(to left, rgba(24, 24, 24, 1) 0%, rgba(0, 0, 0, 0.0) 30%),url('{{- postImage | relative_url -}}');	background-size: cover;">
+				<div class="b1"><h2>{{ post.title }}</h2></div>
+				<div class="b2">{{ post.excerpt }}</div>
+				</div>
+				</a>
+		{%- endif -%}
+{% endfor %}
+<a class="bloglink" target="_self" href="{{base}}/blog/">
+	<button class="b-button">&nbsp;Older Posts<i class="fas fa-arrow-right"></i>&nbsp;</button>
+</a>
+	</div>
+	</div>
+	
+</div>
+</section>

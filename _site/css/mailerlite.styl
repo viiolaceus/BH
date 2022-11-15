@@ -1,0 +1,66 @@
+.ml-form-embedContent
+	margin-bottom: 0 !important
+
+#mlb2-3703915.ml-form-embedContainer h4:first-of-type
+	text-transform: uppercase !important
+
+.ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields
+	padding-right: 0 !important
+
+#mlb2-3703915.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm
+	padding: 0 !important
+
+.ml-input-horizontal
+.ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal
+	display: inline-block
+	width: auto !important
+	float: unset !important
+
+#mlb2-3703915.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group
+	text-align: center !important
+	width: auto !important
+
+#mlb2-3703915.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button
+	&.primary:first-of-type
+		width: unset !important
+		padding: 0.5em 1em !important
+		border: 2px solid white !important
+		font-size: $newsletterInputFontSize !important
+		&:hover
+		&:focus
+			background-color: white !important
+			color: black !important
+		&::before
+			display: inline !important
+			font-size: $newsletterInputFontSize !important
+			font-family: 'Font Awesome 6 Free' !important
+			font-weight: 900 !important
+			content: '\f061' !important
+
+@media only screen and (max-width: 400px)
+	.ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal:first-of-type
+		width: unset !important
+	// .ml-form-formContent.horozintalForm .ml-button-horizontal.primary
+	// 	display: unset !important
+
+#mlb2-3703915.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button:first-of-type
+	font-size: $newsletterInputFontSize !important
+
+// Loading button
+#mlb2-3703915.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button:last-of-type
+	// NOTE(bret): This is just the value of the other button... not a great solution, but it works!
+	width: 44.25px !important
+	padding: 0.5em 0 !important
+	border: 2px solid white !important
+	border-radius: 10ex !important
+	.ml-form-embedSubmitLoad
+		width: unset !important
+		height: unset !important
+	&:hover
+	&:focus
+		background-color: white !important
+		color: black !important
+		transition: filter 0.1s
+		border: 2px solid white !important
+		.ml-form-embedSubmitLoad
+			filter: invert(1)

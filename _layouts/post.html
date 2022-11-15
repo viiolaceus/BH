@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<div id="top-Logo">
+<a target="_self" href="{{base}}/index.html">
+			<img alt="Bunnyhug Home" src="{{base}}/img/bunnyhug-logo.png" width="85" height="85" align="center"/>
+			</a>
+</div>
+
+<div id="splash2">
+		<div class="links">
+			{% include navigation.html %}
+		</div>
+</div>
+<div id="post">
+	<div class="post-Feature-Container">
+	<div class="post-Feature">
+	<h3>{{ page.title }}</h3>
+	<h4><i class="fa-regular fa-calendar"></i> {{ page.date | date_to_string }}</h4>
+		<!-- Share Post-->	
+		<div class="share" style="position:absolute;width:100%;text-align:right;padding-right:3rem;"><br> 	
+			<a class="twitter" href="https://twitter.com/intent/tweet?url={{ post.url }}&text=" target="_blank"><i class="fab fa-twitter"></i></a>
+			<a class="bloglink" href="{{post.url}}" target="_blank"><i class="fas fa-link"></i></a>
+		</div>
+	</div>
+	<div class="post-FeatureBG">
+	{%- if page.image -%}
+		<img src="{{- page.image | relative_url -}}" alt="">
+	{%- else -%}
+		{%- assign postImage = "../../../assets/defaultPost.png" -%}
+		<img src="{{- postImage | relative_url -}}" alt="">
+	{%- endif -%}
+	</div>
+	</div>
+	<div id="post-Content">
+	{{ content }}
+	</div>
+</div>

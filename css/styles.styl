@@ -1,0 +1,490 @@
+$bgColor = #181818
+$fontFamily = 'Kumbh Sans', sans-serif
+$newsletterInputFontSize = 13.3333px
+
+responsiveRect(paddingBottom = 100%, width = 100%)
+	position: relative
+	width: width
+	&::after
+		content: ''
+		display: block
+		padding-bottom: paddingBottom
+
+setSocialMediaColor($name, $color)
+	.{$name}
+		--social_media_color: $color
+
+*, *:before, *:after
+	box-sizing: border-box
+
+html, body
+	min-height: 100%
+	height: 100%
+
+html
+	-ms-text-size-adjust: 100%
+	-webkit-text-size-adjust: 100%
+	font-family: $fontFamily
+	@media (max-width: 767.98px)
+		font-size: 12px
+	@media (min-width: 768px) and (max-width: 991.98px)
+		font-size: 13px
+	@media (min-width: 992px) and (max-width: 1199.98px)
+		font-size: 14px
+	@media (min-width: 1200px) and (max-width: 2549.98px)
+		font-size: 16px
+	@media (min-width: 2550px) and (max-width: 3549.98px)
+		font-size: 24px
+	@media (min-width: 3550px)
+		font-size: 32px
+
+body
+	margin: 0
+	width: 100%
+	overflow-y: scroll
+	background: $bgColor
+	color: white
+
+p, h1, h2, h3, h4, h5, h6
+	margin: 0
+
+a
+	color: #a1a1a1
+	transition: 0.1s color
+	text-decoration: none
+	&:hover
+	&:focus
+	color: white
+
+.moonglow
+    margin 0 auto
+    width 75%
+
+.c-button
+    appearance none
+    font-family inherit
+    display inline-block
+    min-width 100px
+    border 0
+    border-radius 2rem
+    background #fff
+    color #181818
+    font-weight bold
+    padding 0.5rem 1rem 0.5rem 0.5rem
+    font-size 1rem
+    text-transform uppercase
+    text-decoration none
+    cursor pointer
+    vertical-align middle
+    svg
+        display inline-block
+        vertical-align middle
+        font-size 150%
+        fill #fff
+        width 100%
+        height 100%
+        margin-right 0.5rem
+        margin-top -0.25rem
+
+.c-button:hover,
+.c-button:focus
+    background var(--social_media_color)
+    color #fff
+setSocialMediaColor(discord, #7289DA)
+setSocialMediaColor(twitter, #1da1f2)
+setSocialMediaColor(facebook, linear-gradient(to bottom right, #00f2ea 25%, #000 25%, #000 75%, #ff0050 75%, #ff0050 100%))
+setSocialMediaColor(instagram, linear-gradient(to bottom, #833AB4, #e1306c))
+setSocialMediaColor(email, #f0b104)
+setSocialMediaColor(team, #7eaf25)
+setSocialMediaColor(epic, #666)
+
+#splash
+	display: flex
+	justify-content: center
+	align-items: center
+	position: relative
+	height: 100vh
+	h1
+		display: none
+	.video-container
+		display: flex
+		justify-content: center
+		align-items: center
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		overflow: hidden
+		&::after
+			$size = 2.5vmin
+			content: ''
+			position: absolute
+			height: $size
+			left: $size
+			right: $size
+			bottom: $size
+			background: $bgColor
+			border-radius: 10ex
+		video
+			position: absolute
+			min-width: 100%
+			min-height: 100%
+			// width: auto
+			// height: auto
+			@media (min-aspect-ratio: 16/9)
+				height: auto
+			@media (max-aspect-ratio: 16/9)
+				width: auto
+	img
+		position: absolute
+		max-width: 80%
+		max-height: 60%
+	.links
+		z-index: 500
+		position: absolute
+		top: 1rem
+		gap: 0.75em
+		@media (max-width: 479.98px)
+			width: 100%
+			font-size: 1.5rem
+			justify-content: space-evenly
+		@media (min-width: 480px)
+			font-size: 1.25rem
+			right: 1rem
+
+
+.links
+	display: flex
+	justify-content: center
+	gap: 0.5em
+	a
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 2em
+		height: 2em
+		border-radius: 50%
+		background-color: #fafafa
+		color: black
+		transition: color 0.1s, background-color 0.1s
+		&:hover
+		&:focus
+			color: white
+			background: var(--social_media_color)
+
+section
+footer
+	> h3
+		text-align: center
+		padding-top: 1rem
+		margin-bottom: 1rem
+		font-size: 2rem
+		text-transform: uppercase
+		font-weight: 700
+
+#about-the-team
+#about-the-game
+#mailing-list
+	padding: 4rem 0
+	text-align: center
+
+$teamWidth = 62rem
+.team
+.game-info
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-evenly
+	// overflow: hidden
+	padding: "2rem max(2rem, 50vw - %s / 2)" % $teamWidth
+	gap: 1.5rem
+
+.steam-wishlist
+	margin: -0.5rem auto 0
+	width: 100%
+	padding: "0 max(2rem, 50vw - %s / 2) 2rem" % $teamWidth
+	// @media (max-width: 659.97px)
+	// 	max-width: 650px
+	.mobile-fallback
+		display: none
+		background: #282e39
+		width: 100%
+		padding: 1rem
+		text-align: right
+		.info
+			width: 100%
+			display: flex
+			justify-content: center
+			align-items: center
+			@media (max-width: 549.97px)
+				flex-wrap: wrap
+			p
+				margin-left: 1rem
+				opacity: 0.7
+				text-align: left
+				line-height: 1.3
+				@media (max-width: 549.97px)
+					margin-top: 1rem
+					margin-bottom: 1rem
+					text-align: center
+		.steam-button
+			display: flex
+			justify-content: center
+			align-items: center
+			margin: 1rem auto 0
+			width: max-content
+			padding: 0.65rem 1rem
+			background: #75b022
+			color: white
+			background: -webkit-linear-gradient( top, #6fa720 5%, #588a1b 95%)
+			background: linear-gradient( to bottom, #6fa720 5%, #588a1b 95%)
+			background: linear-gradient( to right, #6fa720 5%, #588a1b 95%)
+			@media (max-width: 549.97px)
+				margin-top: 0
+			.fa-steam
+				font-size: 2rem
+				margin-right: 0.5ch
+			span
+				opacity: 0.85
+				padding-top: 0.25em
+	@media (max-width: 659.97px)
+		iframe
+			display: none
+		.mobile-fallback
+			display: block
+
+// 420/536
+$avatarWidth = 404/536
+$avatarPadding = (1 - $avatarWidth) / 2 * 100
+
+.team-member
+	padding: 0 0.25rem 1rem
+	flex: 0 0 18rem
+	text-align: center
+	.avatar
+		position: relative
+		transform: scale(1)
+		transition: transform 0.1s
+		padding-bottom: 7%
+		&:hover
+		&:focus
+			transform: scale(1.08)
+		&::after
+			content: ''
+			position: absolute
+			display: block
+			left: 0
+			top: 0
+			width: 100%
+			padding-bottom: 100%
+			background-image: url('../img/team-member-outline.png');
+			background-size: contain
+			background-position: center
+			background-repeat: no-repeat
+			transform-origin: 50% 58%
+		img
+			display: block
+			padding: ($avatarPadding)%
+			transform: translateY(($avatarPadding / 2)%)
+			margin-bottom: -($avatarPadding)%
+			width: 100%
+			height: auto
+			border-radius: 50%
+			user-select: none
+			pointer-events: none
+	.info
+		padding: 2.25rem 1rem 1.5rem
+		.byline
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-bottom: 0.5em
+			h4
+				font-size: 1.4em
+				// margin-bottom: 0.4em
+			a
+				font-size: 1.2em
+				width: 1em
+				margin-left: 0.75em
+		p
+			color: #e3e3e3
+			line-height: 1.4
+
+$offsets = 10, 7, 3, 5, 6, 7, 9, 8, 7
+.team-member
+	for $offset, $i in $offsets
+		&:nth-child({$i+1})
+			.avatar
+				&::after
+					pointer-events: none
+					if $i % 2
+						transform: "scaleX(-1) rotate(%sdeg) translateY(-1.4%)" % -($offset)
+					else
+						transform: "rotate(%sdeg) translateY(-1.4%)" % -($offset)
+					transition: transform 0.1s
+					^[0..-2]:hover^[-1..-1]
+					^[0..-2]:focus^[-1..-1]
+						if $i % 2
+							transform: scaleX(-1) rotate(0deg) translateY(-1.4%)
+						else
+							transform: rotate(0deg) translateY(-1.4%)
+
+.game-info
+	gap: 0
+	@media (max-width: 559.97px)
+		flex-direction: column
+
+$game_gap = 1.5rem
+
+.slideshow
+.trailer
+	border: 2px solid white
+	border-radius: 6px
+	overflow: hidden
+	box-sizing: border-box
+
+.slideshow
+	display: flex
+	position: relative
+	flex-flow: row nowrap
+	overflow-x: auto
+	scroll-snap-type: x mandatory
+	scroll-behavior: smooth
+	-webkit-overflow-scrolling: touch
+	responsiveRect(56.25%)
+	margin-right: ($game_gap / 2)
+	scrollbar-width: none
+	@media (min-width: 560px)
+		flex: 1
+	&::-webkit-scrollbar
+		height: 0
+		background: transparent
+	picture
+		scroll-snap-align: center
+		width: 100%
+		height: 100%
+		flex-shrink: 0
+	img
+		width: 100%
+		height: auto
+		user-select: none
+		pointer-events: none
+		vertical-align: middle
+
+.trailer
+	font-size: 0
+	@media (max-width: 559.97px)
+		margin-top: $game_gap
+	@media (min-width: 560px)
+		flex: 1
+		// border-left: 2px solid white
+		margin-left: ($game_gap / 2)
+	responsiveRect(56.25%)
+	.iframe-wrapper
+		position: absolute
+		left: 0
+		top: 0
+		width: 100%
+		height: 100%
+		img
+		iframe
+		object
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+
+.newsletter-sign-up
+	h4
+	p
+		font-family: $fontFamily !important
+		text-align: center !important
+	h4
+		text-transform: uppercase !important
+		font-size: 2rem !important
+	p
+		font-size: 1rem !important
+		margin-bottom: 1.0rem !important
+		line-height: 1.5
+	input
+		font-family: Arial, sans-serif !important
+		background: transparent !important
+		border: 2px solid white !important
+		outline: none !important
+		color: white !important
+		border-radius: 10ex !important
+		padding: 0.5em 1em !important
+		font-size: $newsletterInputFontSize !important
+		width: unset !important
+		line-height: normal !important
+		&::placeholder
+			color: #777 !important
+	button
+		background-color: transparent !important
+		border: 2px solid white !important
+		outline: none !important
+		color: white !important
+		border-radius: 10ex !important
+		padding: 0.5em 1em !important
+		cursor: pointer !important
+		transition: 0.1s color, 0.1s background-color !important
+		line-height: normal !important
+		&:hover
+		&:focus
+			background-color: white !important
+			color: black !important
+	.horizontal-fields
+		width: auto !important
+		float: unset !important
+
+@import('mailerlite')
+
+footer
+	padding: "2rem max(2rem, 50vw - %s / 2)" % $teamWidth
+	padding-bottom: 0
+	text-align: center
+	line-height: 1.5
+	// TODO(bret): Make these bigger on mobile
+	.links
+		margin-top: -0.25rem
+		.email
+			position: relative
+			&::after
+				content: ''
+				position: absolute
+				display: block
+				left: -15%
+				top: -25.5%
+				$size = 130%
+				width: $size
+				padding-bottom: $size
+				background-image: url('../img/team-member-outline.png');
+				background-size: contain
+				background-position: center
+				background-repeat: no-repeat
+				pointer-events: none
+				transform-origin: 50% 58%
+				transform: scaleX(-1)
+	.copyright
+		font-size: 0.85em
+		margin-top: 1.5rem
+		display: block
+		line-height: 1.5
+	.site-byline
+		margin-top: 0.5rem
+		font-size: 0.7em
+		opacity: 0.7
+		line-height: 1.5
+	.bottom
+		max-width: 96rem / 2
+		margin: 15rem auto 0
+		background-image: url('../img/bunnyhug-waving-footer.png')
+		background-size: cover
+		background-position: center bottom
+		@media (max-width: 719.98px)
+			responsiveRect(100 * 750 / 1550%, 90%)
+		@media (min-width: 720px) and (max-width: 899.98px)
+			responsiveRect(100 * 750 / 1550%, 70%)
+		@media (min-width: 900px)
+			responsiveRect(100 * 750 / 1550%, 50%)

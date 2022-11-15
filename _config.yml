@@ -18,5 +18,5 @@ paginate: 5
 paginate_path: "/blog/page:num/"
 
 url: viiolaceus.github.io
-baseurl: /bh
+baseurl: /BH
 permalink: date

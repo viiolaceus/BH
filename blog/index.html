@@ -26,9 +26,9 @@ title: Blog
 	</div>
 	<div class="post-FeatureBG">
 	{%- if post.image -%}
-		<img src="{{- post.image | relative_url -}}" alt="">
+		<img src="{{ post.image | relative_url }}" alt="">
 	{%- else -%}
-		<img src="{{ site.baseurl }}assets/defaultPost.png" alt="">
+		<img src="{{ site.baseurl }}/assets/defaultPost.png" alt="">
 	{%- endif -%}
 	</div>
 	</div>
@@ -37,7 +37,7 @@ title: Blog
 	<!-- Share Post-->	
 		<div class="share">Share: 	
 			<a class="twitter" href="https://twitter.com/intent/tweet?url={{ post.url }}&text=" target="_blank"><i class="fab fa-twitter"></i></a>
-			<a class="bloglink" href="{{post.url}}" target="_blank"><i class="fas fa-link"></i></a>
+			<a class="bloglink" href="{{ post.url }}" target="_blank"><i class="fas fa-link"></i></a>
 		</div>
 	</div>
 <hr>
@@ -47,13 +47,13 @@ title: Blog
 	<div class="pagination">	
 		<!-- Pagination links -->
 			{% if paginator.previous_page %}
-				<a href="{{ paginator.previous_page_path }}"class="bloglink" alt="Previous Page"><i class="fas fa-arrow-left"></i></a>
+				<a href="{{ paginator.previous_page_path | relative.url }}"class="bloglink" alt="Previous Page"><i class="fas fa-arrow-left"></i></a>
 			{% else %}
 				<div class="unc"><i class="fas fa-arrow-left"></i></div>
 			{% endif %}
 		Page:<div class="p-button-fade">{{ paginator.page }}</div>of {{ paginator.total_pages }}
 		{% if paginator.next_page %}
-			<a href="{{ paginator.next_page_path }}" class="bloglink" alt="Next page"><i class="fas fa-arrow-right"></i></a>
+			<a href="{{ paginator.next_page_path | relative.url }}" class="bloglink" alt="Next page"><i class="fas fa-arrow-right"></i></a>
 		{% else %}
 		<div class="unc"><i class="fas fa-arrow-right"></i></a></div>
 		{% endif %}

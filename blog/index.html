@@ -21,7 +21,7 @@ title: Blog
 {% for post in paginator.posts %}
 	<div class="post-Feature-Container">
 	<div class="post-Feature">
-	<h3><a href="{{ site.baseurl }}/{{ post.url }}">{{ post.title }}</a></h3>
+	<h3><a href="{{ site.baseurl }}/blog/{{ post.url }}">{{ post.title }}</a></h3>
 	<h4><i class="fa-regular fa-calendar"></i> {{ post.date | date_to_string }}</h4>
 	</div>
 	<div class="post-FeatureBG">

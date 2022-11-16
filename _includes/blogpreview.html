@@ -12,7 +12,7 @@
 			</a>
 		</div>
 		{%- else -%}
-			{%- assign postImage = "{{- site.baseurl -}}/assets/defaultPost.png" -%}
+			{%- assign postImage = "{{ site.baseurl }}/assets/defaultPost.png" -%}
 			<div class="b-card">
 				<a href="{{- post.url -}}">
 					<div class="blog-roll-text" style="background:linear-gradient(to top, rgba(24, 24, 24, 0.75) 50%, rgba(0, 0, 0, 0.1) 100%),url('{{- postImage | relative_url -}}');	background-size: cover;">

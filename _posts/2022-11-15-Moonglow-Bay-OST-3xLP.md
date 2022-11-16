@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Rainy beats to fish/shop to in vinyl form!"
-image: ../../../assets/mgb_3xlp.jpeg
+image: {{ site.baseurl }}/assets/mgb_3xlp.jpeg
 ---
 Soon you will be able to listen to Moonglow Bay's OST in vinyl!
 

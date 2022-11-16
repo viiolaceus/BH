@@ -28,7 +28,7 @@ title: Blog
 	{%- if post.image -%}
 		<img src="{{- post.image | relative_url -}}" alt="">
 	{%- else -%}
-		<img src="../../../assets/defaultPost.png" alt="">
+		<img src="{{ site.baseurl }}assets/defaultPost.png" alt="">
 	{%- endif -%}
 	</div>
 	</div>

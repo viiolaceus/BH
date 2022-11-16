@@ -20,12 +20,12 @@ layout: default
 		<!-- Share Post-->	
 		<div class="share" style="position:absolute;width:100%;text-align:right;padding-right:3rem;"><br> 	
 			<a class="twitter" href="https://twitter.com/intent/tweet?url={{ post.url }}&text=" target="_blank"><i class="fab fa-twitter"></i></a>
-			<a class="bloglink" href="{{post.url}}" target="_blank"><i class="fas fa-link"></i></a>
+			<a class="bloglink" href="{{ post.url }}" target="_blank"><i class="fas fa-link"></i></a>
 		</div>
 	</div>
 	<div class="post-FeatureBG">
 	{%- if page.image -%}
-		<img src="{{- page.image | relative_url -}}" alt="">
+		<img src="{{ site.baseurl }}/{{- page.image | relative_url -}}" alt="">
 	{%- else -%}
 		{%- assign postImage = "{{ site.baseurl }}/assets/defaultPost.png" -%}
 		<img src="{{- postImage | relative_url -}}" alt="">

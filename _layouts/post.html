@@ -2,7 +2,7 @@
 layout: default
 ---
 <div id="top-Logo">
-<a target="_self" href="{{ site.baseurl }}/index.html">
+<a target="_self" href="{{ site.baseurl }}index.html">
 			<img alt="Bunnyhug Home" src="{{ site.baseurl }}/img/bunnyhug-logo.png" width="85" height="85" align="center"/>
 			</a>
 </div>
@@ -19,7 +19,7 @@ layout: default
 	<h4><i class="fa-regular fa-calendar"></i> {{ page.date | date_to_string }}</h4>
 		<!-- Share Post-->	
 		<div class="share" style="position:absolute;width:100%;text-align:right;padding-right:3rem;"><br> 	
-			<a class="twitter" href="https://twitter.com/intent/tweet?url={{ post.url }}&text=" target="_blank"><i class="fab fa-twitter"></i></a>
+			<a class="twitter" href="https://twitter.com/intent/tweet?url={{- site.baseurl -}}{{ post.url -}}&text=" target="_blank"><i class="fab fa-twitter"></i></a>
 			<a class="bloglink" href="{{ post.url }}" target="_blank"><i class="fas fa-link"></i></a>
 		</div>
 	</div>

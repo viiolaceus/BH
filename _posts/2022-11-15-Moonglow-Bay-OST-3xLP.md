@@ -24,4 +24,4 @@ YTR-00079. This is a pre-order and is expected to ship by Q3 2023. Final product
 
 
 <div class="vcontainer" style="position: relative; width: 100%; overflow: hidden; padding-top: 56.25%; margin-bottom:-5rem;margin-top:1rem;"><iframe style="position: absolute;top: 0;left: 0;bottom: 0;right: 0;width: 75%;height: 75%;border: none;left: 50%;
-transform: translateX(-50%);" src="../../assets/mgb_3xlp.mp4" frameborder="0" allowfullscreen></iframe></div>
+transform: translateX(-50%);" src="{{- base.url -}}/assets/mgb_3xlp.mp4" frameborder="0" allowfullscreen></iframe></div>

@@ -27,7 +27,7 @@ layout: default
 	{%- if page.image -%}
 		<img src="{{ site.baseurl }}/{{- page.image | relative_url -}}" alt="">
 	{%- else -%}
-		{%- assign postImage = "{{- site.baseurl -}}/assets/defaultPost.png" -%}
+		{%- assign postImage = "/assets/defaultPost.png" -%}
 		<img src="{{- postImage | relative_url -}}" alt="">
 	{%- endif -%}
 	</div>

@@ -1,25 +1,23 @@
 defaults:
-  - scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-  - scope:
-      path: ""
-    values:
-      layout: "default"
-  - scope:
-      path: "blog/*"
-    values:
-      layout: "default"
-
-plugins: [jekyll-paginate]    
+- scope:
+    path: ''         # an empty string here means all files in the project
+    type: posts
+  values:
+    layout: post
+- scope:
+    path: ''         # an empty string here means all files in the project
+  values:
+    layout: default
+- scope:
+    path: 'blog/*'
+  values:
+    layout: default
+plugins:
+  - jekyll-paginate
 paginate: 5
-paginate_path: "/blog/page:num/"
-
-url: https://viiolaceus.github.io
+paginate_path: '/blog/page:num/'
+url: 'https://viiolaceus.github.io'
 baseurl: /BH
 permalink: date
-website: https://viiolaceus.github.io
-
+website: 'https://viiolaceus.github.io'
 markdown: kramdown

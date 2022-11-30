@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Moonglow Bay 1.0.2: Steam"
-image: {{ site.baseurl }}/assets/mgb-102.jpg
+image: "{{ site.baseurl }}/assets/mgb-102.jpg"
 ---
 A official/stable patch for STEAM has been published! Version 1.0.2  
 

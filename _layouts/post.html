@@ -25,7 +25,7 @@ layout: default
 	</div>
 	<div class="post-FeatureBG">
 	{%- if page.image -%}
-		<img src="{{ site.baseurl }}/{{- page.image | relative_url -}}" alt="">
+		<img src="{{- page.image | relative_url -}}" alt="">
 	{%- else -%}
 		{%- assign postImage = "/assets/defaultPost.png" -%}
 		<img src="{{- postImage | relative_url -}}" alt="">

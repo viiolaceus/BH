@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mooonglow Bay 1.0.5"
-image: "{{ site.baseurl }}/assets/mgb-105.png"
+image: "/assets/mgb-105.png"
 ---
 Hi, hello friends! It’s been a while since you’ve heard from us but we’ve got some great news to share. 
 

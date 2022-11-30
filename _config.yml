@@ -16,8 +16,8 @@ plugins:
   - jekyll-paginate
 paginate: 5
 paginate_path: '/blog/page:num/'
-url: 'https://viiolaceus.github.io'
-baseurl: /BH
+url: 'https://bunnyhug.games'
+baseurl: /
 permalink: date
-website: 'https://viiolaceus.github.io'
+website: 'https://bunnyhug.games'
 markdown: kramdown

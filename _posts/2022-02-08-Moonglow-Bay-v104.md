@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mooonglow Bay 1.0.4: Steam & EGS"
-image: "{{ site.baseurl }}/assets/mgb-104.jpg"
+image: "/assets/mgb-104.jpg"
 ---
 Yay, we have more frames!
 
